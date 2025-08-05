@@ -5,7 +5,7 @@ import { viteSourceLocator } from "@metagptx/vite-plugin-source-locator";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/Imagiro/',
+  base: '/imagiro/', // <-- use lowercase to match your repo name
   plugins: [
     viteSourceLocator({
       prefix: "mgx",
