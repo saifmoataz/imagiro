@@ -15,6 +15,12 @@ export default function NotFound() {
           <Link to="/">Return Home</Link>
         </Button>
       </div>
+      <script>
+        {`// If not already at the root, redirect to home
+          if (location.pathname !== '/imagiro/' && !location.pathname.endsWith('.html')) {
+            location.replace('/imagiro/');
+          }`}
+      </script>
     </Layout>
   );
 }
