@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect fill="#f0f0f0" width="800" height="800"/>
+  <rect fill="#e0e0e0" x="300" y="300" width="200" height="200"/>
+  <path fill="#d0d0d0" d="M300,300 L500,500 M500,300 L300,500"/>
+  <text fill="#888" font-family="Arial" font-size="32" text-anchor="middle" x="400" y="550">Imagiro Product</text>
+</svg>
