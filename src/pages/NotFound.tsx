@@ -1,8 +1,18 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function NotFound() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Redirect to home if not already at the root
+    if (window.location.pathname !== '/imagiro/' && !window.location.pathname.endsWith('.html')) {
+      navigate("/", { replace: true });
+    }
+  }, [navigate]);
+
   return (
     <Layout>
       <div className="container mx-auto px-4 py-16 flex flex-col items-center justify-center text-center">
@@ -15,12 +25,6 @@ export default function NotFound() {
           <Link to="/">Return Home</Link>
         </Button>
       </div>
-      <script>
-        {`// If not already at the root, redirect to home
-          if (location.pathname !== '/imagiro/' && !location.pathname.endsWith('.html')) {
-            location.replace('/imagiro/');
-          }`}
-      </script>
     </Layout>
   );
 }
