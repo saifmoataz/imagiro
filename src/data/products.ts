@@ -73,18 +73,18 @@ export const products: Product[] = [
       { id: "handmade-washi", name: "Handmade Washi Paper", price: 8 }
     ],
     inStock: true,
-    category: "animals",
+    category: "guns",
     featured: true
   },
   {
-    id: 'geometric-polyhedron',
-    name: 'Geometric Polyhedron',
+    id: 'sniper-rifle',
+    name: 'Sniper Rifle',
     price: 49.99,
-    shortDescription: 'A complex geometric form created through precise mathematical folds.',
-    description: 'The Geometric Polyhedron is a testament to the mathematical precision possible with origami. This intricate piece features multiple interconnected faces forming a perfect polyhedron structure. The clean lines and sharp angles create fascinating light and shadow patterns as the ambient light changes throughout the day. Each fold is carefully calculated and executed, resulting in a perfectly balanced geometric sculpture. This piece works beautifully as a centerpiece or artistic focus in modern, minimalist spaces.',
-    images: ['/assets/products/placeholder.svg'],
-    category: 'geometric',
-    featured: false,
+    shortDescription: 'A precision-crafted origami sniper rifle with intricate details.',
+    description: 'The Sniper Rifle is a testament to the art of origami, showcasing the delicate balance between complexity and elegance. This piece features multiple moving parts, including a folding bipod and an adjustable scope, all crafted from high-quality paper. The attention to detail in the folds and creases creates a realistic representation of a sniper rifle, making it a perfect addition for collectors or as a unique gift for enthusiasts of military history and weaponry.',
+    images: [`${import.meta.env.BASE_URL}assets/products/Sniper.png`],
+    category: 'guns',
+    featured: true,
     inStock: true,
     availableMaterials: [materials[0], materials[1], materials[2], materials[3]]
   },
@@ -108,7 +108,7 @@ export const products: Product[] = [
     description: 'The Abstract Wave pushes the boundaries of traditional origami by creating fluid, organic curves that seem to defy the constraints of paper folding. This dynamic piece captures the essence of water in motion, frozen in a moment of perfect balance. Multiple curved elements interact to create a sense of movement and rhythm. The Abstract Wave demonstrates the potential of origami to express not just precise geometry, but also natural, flowing forms. This piece makes a striking conversation starter in contemporary spaces and pairs well with minimalist decor.',
     images: ['/assets/products/placeholder.svg'],
     category: 'abstract',
-    featured: true,
+    featured: false,
     inStock: true,
     availableMaterials: [materials[0], materials[2]]
   },
