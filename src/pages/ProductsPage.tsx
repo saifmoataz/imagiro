@@ -18,7 +18,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/co
 import { products, Product } from '@/data/products';
 
 // Define categories and price range
-const categories = ['animals', 'plants', 'geometric', 'abstract'];
+const categories = ['guns','animals', 'plants', 'geometric', 'abstract'];
 const minPrice = 0;
 const maxPrice = 100;
 

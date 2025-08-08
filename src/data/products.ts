@@ -45,6 +45,22 @@ export const materials: Material[] = [
 // Sample products
 export const products: Product[] = [
   {
+    id: "gun-pistol",
+    name: "Pistol",
+    price: 24.99,
+    shortDescription: "A miniature origami pistol with intricate details.",
+    description: "This origami pistol is a unique blend of art and craftsmanship, showcasing the intricate details of a firearm in paper form. Each fold is meticulously crafted to create a realistic representation, making it a perfect conversation piece or collector's item.",
+    images: [`${import.meta.env.BASE_URL}assets/products/Pistol.png`],
+    availableMaterials: [
+      { id: "white-paper", name: "White Premium Paper", price: 0 },
+      { id: "gold-foil", name: "Gold Foil Accent", price: 5 },
+      { id: "handmade-washi", name: "Handmade Washi Paper", price: 8 }
+    ],
+    inStock: true,
+    category: "guns",
+    featured: true
+  },
+  {
     id: "minimal-crane",
     name: "Minimal Crane",
     price: 24.99,
@@ -68,7 +84,7 @@ export const products: Product[] = [
     description: 'The Geometric Polyhedron is a testament to the mathematical precision possible with origami. This intricate piece features multiple interconnected faces forming a perfect polyhedron structure. The clean lines and sharp angles create fascinating light and shadow patterns as the ambient light changes throughout the day. Each fold is carefully calculated and executed, resulting in a perfectly balanced geometric sculpture. This piece works beautifully as a centerpiece or artistic focus in modern, minimalist spaces.',
     images: ['/assets/products/placeholder.svg'],
     category: 'geometric',
-    featured: true,
+    featured: false,
     inStock: true,
     availableMaterials: [materials[0], materials[1], materials[2], materials[3]]
   },

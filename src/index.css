@@ -98,4 +98,11 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  @media (pointer: fine) {
+    body, html,
+    a, button, input, textarea, select, label, [role="button"], [role="link"] {
+      cursor: none !important;
+    }
+  }
 }
