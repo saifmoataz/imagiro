@@ -61,12 +61,12 @@ export const products: Product[] = [
     featured: true
   },
   {
-    id: "minimal-crane",
-    name: "Minimal Crane",
+    id: "gun-ak-47",
+    name: "Ak-47",
     price: 24.99,
-    shortDescription: "A timeless origami crane with a minimalist aesthetic.",
-    description: "Handcrafted from premium origami paper, the Minimal Crane embodies elegance and simplicity. Perfect for modern interiors, it symbolizes peace and good fortune.",
-    images: ['/assets/products/placeholder.svg'],
+    shortDescription: "A detailed origami representation of the iconic AK-47 rifle.",
+    description: "The Ak-47 origami piece captures the essence of this iconic firearm with precision and artistry. Each fold is designed to reflect the unique features of the AK-47, from its distinctive shape to its intricate details. This piece serves as a striking representation of both art and weaponry, appealing to collectors and enthusiasts alike.",
+    images: [`${import.meta.env.BASE_URL}assets/products/Ak.png`],
     availableMaterials: [
       { id: "white-paper", name: "White Premium Paper", price: 0 },
       { id: "gold-foil", name: "Gold Foil Accent", price: 5 },
