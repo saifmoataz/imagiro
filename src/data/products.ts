@@ -16,28 +16,39 @@ export interface Product {
   featured: boolean;
   inStock: boolean;
   availableMaterials: Material[];
+  difficulty: 'beginner' | 'intermediate' | 'expert';
 }
 
 // Materials
 export const materials: Material[] = [
   { 
     id: 'material-1', 
-    name: 'Premium Paper (+$5)', 
+    name: 'Carton Paper (+$5)', 
     price: 5.00 
   },
   { 
     id: 'material-2', 
-    name: 'Gold Trim (+$10)', 
+    name: 'Cutter (+$10)', 
     price: 10.00 
   },
   { 
     id: 'material-3', 
-    name: 'Display Case (+$15)', 
+    name: 'Bone Folder (+$15)', 
     price: 15.00 
   },
   { 
     id: 'material-4', 
-    name: 'LED Lighting (+$20)', 
+    name: 'Glue (+$20)', 
+    price: 20.00 
+  },
+  { 
+    id: 'material-5', 
+    name: 'Adhesive Glue (+$20)', 
+    price: 20.00 
+  },
+  { 
+    id: 'material-6', 
+    name: 'Scissors (+$20)', 
     price: 20.00 
   }
 ];
@@ -51,14 +62,11 @@ export const products: Product[] = [
     shortDescription: "A miniature origami pistol with intricate details.",
     description: "This origami pistol is a unique blend of art and craftsmanship, showcasing the intricate details of a firearm in paper form. Each fold is meticulously crafted to create a realistic representation, making it a perfect conversation piece or collector's item.",
     images: [`${import.meta.env.BASE_URL}assets/products/Pistol.png`],
-    availableMaterials: [
-      { id: "white-paper", name: "White Premium Paper", price: 0 },
-      { id: "gold-foil", name: "Gold Foil Accent", price: 5 },
-      { id: "handmade-washi", name: "Handmade Washi Paper", price: 8 }
-    ],
+    availableMaterials: [materials[0], materials[1], materials[2], materials[3], materials[4], materials[5]],
     inStock: true,
     category: "guns",
-    featured: true
+    featured: true,
+    difficulty: "beginner"
   },
   {
     id: "gun-ak-47",
@@ -67,14 +75,11 @@ export const products: Product[] = [
     shortDescription: "A detailed origami representation of the iconic AK-47 rifle.",
     description: "The Ak-47 origami piece captures the essence of this iconic firearm with precision and artistry. Each fold is designed to reflect the unique features of the AK-47, from its distinctive shape to its intricate details. This piece serves as a striking representation of both art and weaponry, appealing to collectors and enthusiasts alike.",
     images: [`${import.meta.env.BASE_URL}assets/products/Ak.png`],
-    availableMaterials: [
-      { id: "white-paper", name: "White Premium Paper", price: 0 },
-      { id: "gold-foil", name: "Gold Foil Accent", price: 5 },
-      { id: "handmade-washi", name: "Handmade Washi Paper", price: 8 }
-    ],
+    availableMaterials: [materials[0], materials[1], materials[2], materials[3], materials[4], materials[5]],
     inStock: true,
     category: "guns",
-    featured: true
+    featured: true,
+    difficulty: "intermediate"
   },
   {
     id: 'sniper-rifle',
@@ -86,7 +91,8 @@ export const products: Product[] = [
     category: 'guns',
     featured: true,
     inStock: true,
-    availableMaterials: [materials[0], materials[1], materials[2], materials[3]]
+    availableMaterials: [materials[0], materials[1], materials[2], materials[3], materials[4], materials[5]],
+    difficulty: "expert"
   },
   {
     id: 'lotus-bloom',
@@ -98,7 +104,8 @@ export const products: Product[] = [
     category: 'plants',
     featured: false,
     inStock: true,
-    availableMaterials: [materials[0], materials[1], materials[3]]
+    availableMaterials: [materials[0], materials[1], materials[2], materials[3], materials[4], materials[5]],
+    difficulty: "beginner"
   },
   {
     id: 'abstract-wave',
@@ -110,7 +117,8 @@ export const products: Product[] = [
     category: 'abstract',
     featured: false,
     inStock: true,
-    availableMaterials: [materials[0], materials[2]]
+    availableMaterials: [materials[0], materials[1], materials[2], materials[3], materials[4], materials[5]],
+    difficulty: "expert"
   },
   {
     id: 'architectural-pavilion',
@@ -122,7 +130,8 @@ export const products: Product[] = [
     category: 'geometric',
     featured: false,
     inStock: true,
-    availableMaterials: [materials[0], materials[1], materials[2]]
+    availableMaterials: [materials[0], materials[1], materials[2], materials[3], materials[4], materials[5]],
+    difficulty: "intermediate"
   },
   {
     id: 'minimal-fox',
@@ -134,7 +143,8 @@ export const products: Product[] = [
     category: 'animals',
     featured: false,
     inStock: true,
-    availableMaterials: [materials[0], materials[2], materials[3]]
+    availableMaterials: [materials[0], materials[1], materials[2], materials[3], materials[4], materials[5]],
+    difficulty: "beginner"
   },
   {
     id: 'bonsai-sculpture',
@@ -146,7 +156,8 @@ export const products: Product[] = [
     category: 'plants',
     featured: true,
     inStock: true,
-    availableMaterials: [materials[0], materials[2], materials[3]]
+    availableMaterials: [materials[0], materials[1], materials[2], materials[3], materials[4], materials[5]],
+    difficulty: "intermediate"
   },
   {
     id: 'minimal-elephant',
@@ -158,7 +169,8 @@ export const products: Product[] = [
     category: 'animals',
     featured: false,
     inStock: true,
-    availableMaterials: [materials[0], materials[1], materials[2]]
+    availableMaterials: [materials[0], materials[1], materials[2], materials[3], materials[4], materials[5]],
+    difficulty: "expert"
   }
 ];
 

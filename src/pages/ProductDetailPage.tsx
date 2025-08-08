@@ -138,8 +138,12 @@ export default function ProductDetailPage() {
           {/* Product Info */}
           <div>
             <div className="mb-2">
-              <span className="inline-block bg-green-700 text-white text-xs px-3 py-1 rounded-full mb-2">
-                Beginner
+              <span className={`inline-block px-3 py-1 rounded-full mb-2 text-xs font-semibold ${
+                product.difficulty === 'beginner' ? 'bg-green-700 text-white' :
+                product.difficulty === 'intermediate' ? 'bg-yellow-600 text-white' :
+                'bg-red-700 text-white'
+              }`}>
+                {product.difficulty.charAt(0).toUpperCase() + product.difficulty.slice(1)}
               </span>
             </div>
             <h1 className="text-3xl font-bold mb-1">{product.name}</h1>
