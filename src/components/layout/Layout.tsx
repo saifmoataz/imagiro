@@ -113,11 +113,7 @@ export function Layout({ children }: LayoutProps) {
                       <Link to="/" className="text-xl font-bold">
                         Imagiro
                       </Link>
-                      <SheetTrigger asChild>
-                        <Button variant="ghost" size="icon">
-                          <X className="h-5 w-5" />
-                        </Button>
-                      </SheetTrigger>
+                      
                     </div>
                     <div className="flex flex-col space-y-2 py-4">
                       <SheetTrigger asChild>

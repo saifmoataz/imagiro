@@ -8,6 +8,9 @@ export default function CustomCursor() {
   const [clicked, setClicked] = useState(false);
   const [linkHovered, setLinkHovered] = useState(false);
 
+  // Check if modal is open by looking for a class on body
+  const [modalActive, setModalActive] = useState(false);
+
   useEffect(() => {
     const mql = window.matchMedia('(pointer: fine)');
     // Only show custom cursor on devices with fine pointer (like mouse)
@@ -51,6 +54,15 @@ export default function CustomCursor() {
     document.addEventListener('mouseover', onLinkHoverStart);
     document.addEventListener('mouseout', onLinkHoverEnd);
 
+    // Check if modal is open
+    const checkModal = () => {
+      setModalActive(document.body.classList.contains('modal-open'));
+    };
+    // Listen for DOM changes
+    const observer = new MutationObserver(checkModal);
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    checkModal();
+
     return () => {
       document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mousedown', onMouseDown);
@@ -59,6 +71,7 @@ export default function CustomCursor() {
       document.removeEventListener('mouseleave', onMouseLeave);
       document.removeEventListener('mouseover', onLinkHoverStart);
       document.removeEventListener('mouseout', onLinkHoverEnd);
+      observer.disconnect();
     };
   }, [visible]);
 
@@ -67,13 +80,17 @@ export default function CustomCursor() {
   // Only render on desktop devices with mouse
   if (window.matchMedia('(pointer: coarse)').matches) return null;
 
+  // Hide custom cursor if modal is open
+  if (modalActive) return null;
+
   // Determine cursor color based on theme
   const cursorColor = theme === 'dark' ? 'white' : 'black';
   
   return (
     <div
-      className="fixed top-0 left-0 z-50 pointer-events-none"
+      className="fixed top-0 left-0 pointer-events-none"
       style={{
+        zIndex: 2147483647, // maximum allowed by browsers
         transition: 'opacity 0.2s ease',
         opacity: visible ? 1 : 0,
         transform: `translate(${position.x}px, ${position.y}px)`,
