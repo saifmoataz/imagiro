@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import pistolImage from '/assets/products/Pistol.png';
+import akImage from '/assets/products/Ak.png';
+import sniperImage from '/assets/products/Sniper.png';
+import jerryImage from '/assets/products/jerry.png';
+import plantImage from '/assets/products/Plant.png';
 import { 
   ArrowRight, 
   ChevronRight, 
@@ -53,29 +58,29 @@ export default function HomePage() {
               <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-4 p-4">
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
                   <img 
-                    src="/assets/products/placeholder.svg" 
-                    alt="Minimal Crane" 
+                    src={pistolImage}
+                    alt="Pistol Origami" 
                     className="w-full h-full object-cover" 
                   />
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
                   <img 
-                    src="/assets/products/placeholder.svg" 
-                    alt="Geometric Design" 
+                    src={akImage}
+                    alt="Ak-47 Origami" 
                     className="w-full h-full object-cover" 
                   />
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
                   <img 
-                    src="/assets/products/placeholder.svg" 
-                    alt="Abstract Wave" 
+                    src={sniperImage}
+                    alt="Sniper Origami"
                     className="w-full h-full object-cover" 
                   />
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
                   <img 
-                    src="/assets/products/placeholder.svg" 
-                    alt="Paper Bonsai" 
+                    src={jerryImage}
+                    alt="Jerry" 
                     className="w-full h-full object-cover" 
                   />
                 </div>
@@ -202,7 +207,7 @@ export default function HomePage() {
             >
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10"></div>
               <img
-                src="/assets/products/placeholder.svg"
+                src={jerryImage}
                 alt="Animal Designs"
                 className="w-full h-full object-cover transition-transform group-hover:scale-105"
               />
@@ -222,7 +227,7 @@ export default function HomePage() {
             >
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10"></div>
               <img
-                src="/assets/products/placeholder.svg"
+                src={pistolImage}
                 alt="Geometric Forms"
                 className="w-full h-full object-cover transition-transform group-hover:scale-105"
               />
@@ -242,7 +247,7 @@ export default function HomePage() {
             >
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10"></div>
               <img
-                src="/assets/products/placeholder.svg"
+                src={plantImage}
                 alt="Plant Inspired"
                 className="w-full h-full object-cover transition-transform group-hover:scale-105"
               />
@@ -276,15 +281,15 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                "I received the Minimal Crane as a gift and was blown away by the precision and elegance. It's become the focal point of my home office."
+                No Customers Yet!
               </p>
               <div className="flex items-center">
                 <div className="mr-4">
                   <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700"></div>
                 </div>
                 <div>
-                  <h4 className="font-medium">Sarah J.</h4>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Design Enthusiast</p>
+                  <h4 className="font-medium">Person 1</h4>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Info about person</p>
                 </div>
               </div>
             </div>
@@ -300,15 +305,15 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                "The Paper Bonsai exceeded my expectations. It's an amazing conversation piece and I love that it requires no maintenance unlike a real bonsai!"
+                No Customers Yet!
               </p>
               <div className="flex items-center">
                 <div className="mr-4">
                   <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700"></div>
                 </div>
                 <div>
-                  <h4 className="font-medium">Michael T.</h4>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Architect</p>
+                  <h4 className="font-medium">Person 2</h4>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Info about person</p>
                 </div>
               </div>
             </div>
@@ -324,15 +329,15 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                "I purchased three geometric pieces for my minimalist living room and they add just the right amount of artistic touch without overwhelming the space."
+                No Customers Yet!
               </p>
               <div className="flex items-center">
                 <div className="mr-4">
                   <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700"></div>
                 </div>
                 <div>
-                  <h4 className="font-medium">Emma R.</h4>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Interior Designer</p>
+                  <h4 className="font-medium">Person 3</h4>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Info about person</p>
                 </div>
               </div>
             </div>

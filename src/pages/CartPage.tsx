@@ -98,7 +98,7 @@ export default function CartPage() {
 
   const handlePromoSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (promoCode.trim().toLowerCase() === 'welcome10') {
+    if (promoCode.trim().toLowerCase() === 'qwertyuiopkokok') {
       setPromoDiscount(0.1);
       setPromoError('');
     } else {
